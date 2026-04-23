@@ -194,7 +194,7 @@ export function BookingWidget() {
               <label className="text-sm">
                 <span className="text-xs text-[#222]/70">Staff Member</span>
                 <select
-                  className="mt-2 h-10 w-full rounded border border-black/15 bg-white px-3 text-sm sm:w-[260px]"
+                  className="mt-2 h-10 w-full rounded border border-black/15 bg-white px-3 text-sm text-[#222] sm:w-[260px]"
                   value={staffId}
                   onChange={(e) => setStaffId(e.target.value)}
                 >
@@ -291,7 +291,7 @@ export function BookingWidget() {
               <label className="block text-sm">
                 <span className="text-xs text-[#222]/70">Staff Member *</span>
                 <select
-                  className="mt-2 h-10 w-full rounded border border-black/15 bg-white px-3 text-sm sm:w-[260px]"
+                  className="mt-2 h-10 w-full rounded border border-black/15 bg-white px-3 text-sm text-[#222] sm:w-[260px]"
                   value={staffId}
                   onChange={(e) => setStaffId(e.target.value)}
                 >
@@ -305,7 +305,7 @@ export function BookingWidget() {
               <div className="text-sm">
                 <p className="text-xs text-[#222]/70">Service Details</p>
                 <select
-                  className="mt-2 h-10 w-full rounded border border-black/15 bg-white px-3 text-sm sm:w-[260px]"
+                  className="mt-2 h-10 w-full rounded border border-black/15 bg-white px-3 text-sm text-[#222] sm:w-[260px]"
                   value={serviceId}
                   onChange={(e) => setServiceId(e.target.value as BookableService["id"])}
                 >
@@ -344,6 +344,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">First name*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="Enter first name"
                 value={client.firstName}
                 onChange={(e) => setClient({ ...client, firstName: e.target.value })}
               />
@@ -352,6 +353,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">Last name*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="Enter last name"
                 value={client.lastName}
                 onChange={(e) => setClient({ ...client, lastName: e.target.value })}
               />
@@ -361,6 +363,7 @@ export function BookingWidget() {
               <input
                 type="email"
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="email@example.com"
                 value={client.email}
                 onChange={(e) => setClient({ ...client, email: e.target.value })}
               />
@@ -369,6 +372,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">Phone*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="Enter phone number"
                 value={client.phone}
                 onChange={(e) => setClient({ ...client, phone: e.target.value })}
               />
@@ -381,6 +385,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">Country/Region*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="Country"
                 value={client.country}
                 onChange={(e) => setClient({ ...client, country: e.target.value })}
               />
@@ -389,6 +394,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">Address*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="Street address"
                 value={client.address}
                 onChange={(e) => setClient({ ...client, address: e.target.value })}
               />
@@ -397,6 +403,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">City*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="City"
                 value={client.city}
                 onChange={(e) => setClient({ ...client, city: e.target.value })}
               />
@@ -405,6 +412,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">Region*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="State / Region"
                 value={client.region}
                 onChange={(e) => setClient({ ...client, region: e.target.value })}
               />
@@ -413,6 +421,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">Zip / Postal code*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="Zip / Postal code"
                 value={client.zip}
                 onChange={(e) => setClient({ ...client, zip: e.target.value })}
               />
@@ -421,6 +430,7 @@ export function BookingWidget() {
               <span className="text-xs text-[#222]/70">Date picker*</span>
               <input
                 className="mt-2 h-10 w-full border border-black/15 bg-white px-3 text-sm"
+                placeholder="MM/DD/YYYY"
                 value={formatDateShort(date)}
                 onChange={(e) => {
                   const parsed = parseDateShort(e.target.value);
@@ -433,6 +443,7 @@ export function BookingWidget() {
               <textarea
                 rows={4}
                 className="mt-2 w-full resize-none border border-black/15 bg-white px-3 py-2 text-sm"
+                placeholder="Tell us what you need help with"
                 value={client.message}
                 onChange={(e) => setClient({ ...client, message: e.target.value })}
               />

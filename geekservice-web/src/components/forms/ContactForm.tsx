@@ -78,7 +78,7 @@ export function ContactForm() {
           label="First Name"
           name="firstName"
           required
-          placeholder=""
+          placeholder="Enter your first name"
           autoComplete="given-name"
           error={errs?.firstName?.[0]}
         />
@@ -86,7 +86,7 @@ export function ContactForm() {
           label="Last Name"
           name="lastName"
           required
-          placeholder=""
+          placeholder="Enter your last name"
           autoComplete="family-name"
           error={errs?.lastName?.[0]}
         />
