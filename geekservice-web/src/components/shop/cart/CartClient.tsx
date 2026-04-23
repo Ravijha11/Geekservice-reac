@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { ButtonLink, Button } from "@/components/ui/Button";
 import { useCart } from "@/components/shop/CartProvider";
+import { ProductImage } from "@/components/shop/ProductImage.client";
 
 function fmt(n: number) {
   return n.toLocaleString(undefined, { style: "currency", currency: "USD" });
@@ -48,7 +49,13 @@ export function CartClient() {
                 key={p.id}
                 className="flex gap-4 border border-black/10 bg-white p-4"
               >
-                <div className="h-20 w-28 flex-none bg-gradient-to-b from-[#f3f3f3] to-[#dedede]" />
+                <div className="h-20 w-28 flex-none bg-[#f3f3f3]">
+                  <ProductImage
+                    src={p.imageSrc}
+                    alt={p.title}
+                    className="h-full w-full"
+                  />
+                </div>
                 <div className="flex-1">
                   <Link href={`/shop/${p.slug}`} className="text-sm font-medium hover:underline">
                     {p.title}

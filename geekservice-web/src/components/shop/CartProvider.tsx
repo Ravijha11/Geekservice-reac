@@ -54,15 +54,21 @@ function getEffectivePrice(p: Product) {
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [cart, setCart] = useState<Cart>({ lines: [] });
+  const [cart, setCart] = useState<Cart>(() => {
+    try {
+      const parsed = safeParse(window.localStorage.getItem(STORAGE_KEY));
+      return parsed ?? { lines: [] };
+    } catch {
+      return { lines: [] };
+    }
+  });
 
   useEffect(() => {
-    const parsed = safeParse(window.localStorage.getItem(STORAGE_KEY));
-    if (parsed) setCart(parsed);
-  }, []);
-
-  useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+    } catch {
+      // Ignore storage write errors (e.g., privacy mode).
+    }
   }, [cart]);
 
   const getProduct = useCallback(

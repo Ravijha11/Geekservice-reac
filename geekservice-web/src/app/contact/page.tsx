@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata = {
   title: "Contact",
-  description: "Request support or ask a question.",
+  description: "Reach out to Geek Care LLC for assistance.",
 };
 
 export default function ContactPage() {
@@ -15,8 +15,8 @@ export default function ContactPage() {
         <SectionInner>
           <SectionHeading
             eyebrow="Contact"
-            title="Tell us what’s going on"
-            description="Share a few details and we’ll get back to you with next steps."
+            title="Reach Out to Geek Care LLC - Contact Us for Assistance"
+            description="We’re here to help with your service and support needs."
           />
         </SectionInner>
       </Section>
@@ -25,74 +25,55 @@ export default function ContactPage() {
         <Container className="grid items-start gap-10 lg:grid-cols-2">
           <div className="rounded-3xl bg-muted/20 p-6 sm:p-10">
             <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              Fast, Expert Repairs — Delivered Directly to Your Door.
-            </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              We put your repair needs first with professional, on-site solutions.
-              Whether you are facing issues with a computer, printer, or household
-              appliance, our local team is ready to help. Simply reach out to
-              schedule a visit, and an expert technician will arrive at your
-              doorstep to get things running smoothly.
+              Contact Information
             </p>
 
-            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
-              <li>
-                <span className="font-medium text-foreground">Local Experts:</span>{" "}
-                Real technicians visiting your home or office.
-              </li>
-              <li>
-                <span className="font-medium text-foreground">
-                  Prompt Service:
-                </span>{" "}
-                Quick response times to minimize your downtime.
-              </li>
-              <li>
-                <span className="font-medium text-foreground">
-                  Pay After Service:
-                </span>{" "}
-                Your peace of mind is guaranteed—you only pay once the repair is
-                complete.
-              </li>
-            </ul>
-
-            <p className="mt-6 text-sm font-semibold text-foreground">
-              Call Us For Appointment
+            <p className="mt-4 text-lg font-semibold tracking-tight text-foreground">
+              Geek Care LLC
             </p>
-            <ul className="mt-3 space-y-3 text-sm text-muted-foreground">
-              <li>
-                Call our booking desk today to schedule your on-site repair.
-                Provide your address and the issue you’re facing, and our team
-                will get in touch quickly to confirm your visit.
-              </li>
-              <li>
-                <span className="font-medium text-foreground">Local Experts:</span>{" "}
-                Thousands of certified technicians across the country.
-              </li>
-              <li>
-                <span className="font-medium text-foreground">One-Visit Fix:</span>{" "}
-                Most repairs are completed in a single trip to your home.
-              </li>
-              <li>
-                <span className="font-medium text-foreground">
-                  Same-Day Service:
-                </span>{" "}
-                We prioritize getting your devices back to peak performance
-                immediately.
-              </li>
-            </ul>
+            <p className="mt-2 text-sm text-muted-foreground">
+              451 Anchor Ln, Gun Barrel City, TX 75156, United States
+            </p>
+
+            <div className="mt-6 space-y-2 text-sm text-muted-foreground">
+              <p className="font-semibold text-foreground">Customer Support</p>
+              <p>{siteConfig.contact.phone}</p>
+              <p>
+                E-mail:{" "}
+                <a className="font-medium text-foreground" href={`mailto:${siteConfig.contact.email}`}>
+                  {siteConfig.contact.email}
+                </a>
+              </p>
+            </div>
 
             <div className="mt-8 space-y-2 text-sm text-muted-foreground">
-              <p className="font-semibold text-foreground">Direct contact</p>
-              <p>{siteConfig.contact.phone}</p>
-              <p>{siteConfig.contact.email}</p>
+              <p className="font-semibold text-foreground">Customer Service Team</p>
+              <p>Customer Support : {siteConfig.contact.phone}</p>
+            </div>
+
+            <div className="mt-8 space-y-2 text-sm text-muted-foreground">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                Let’s talk
+              </p>
+              <p>
+                <a className="font-medium text-foreground" href={`mailto:${siteConfig.contact.email}`}>
+                  {siteConfig.contact.email}
+                </a>
+              </p>
+              <p className="font-medium text-foreground">{siteConfig.contact.phone}</p>
+            </div>
+
+            <div className="mt-8 space-y-1 text-sm text-muted-foreground">
+              <p className="font-semibold text-foreground">Hours</p>
+              <p>Mon - Fri 9:00 am – 5:00 pm</p>
+              <p>Saturday 9:00 am – 2:00 pm</p>
+              <p>Sunday 9:00 am – 2:00 pm</p>
             </div>
           </div>
 
           <div className="rounded-3xl border border-border/60 bg-background p-6 sm:p-10">
-            <p className="text-4xl font-semibold tracking-tight">Inquire Today</p>
-            <p className="mt-2 text-sm font-medium text-muted-foreground">
-              Service Inquiry
-            </p>
+            <p className="text-4xl font-semibold tracking-tight">Contact Us</p>
+            <p className="mt-2 text-sm font-medium text-muted-foreground">Service Inquiry</p>
             <div className="mt-6">
               <ContactForm />
             </div>
