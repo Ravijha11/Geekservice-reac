@@ -18,9 +18,10 @@ export const metadata = {
 export default async function ShopPage({
   searchParams,
 }: {
-  searchParams: Record<string, string | string[] | undefined>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const filters = parseShopSearchParams(searchParams);
+  const resolvedSearchParams = (await searchParams) ?? {};
+  const filters = parseShopSearchParams(resolvedSearchParams);
   const items = filterAndSortProducts(filters);
   const facets = getFacetOptions();
 

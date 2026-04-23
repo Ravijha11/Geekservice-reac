@@ -159,7 +159,7 @@ export const products: Product[] = [
     slug: "compact-usb-hub",
     title: "Compact USB Hub",
     category: "Computer Accessories",
-    imageSrc: "/products/compact-usb-hub.jpg",
+    imageSrc: "/products%20images/compactusdhub.png",
     price: 35.0,
     attributes: {
       productType: "Accessory",
@@ -173,7 +173,7 @@ export const products: Product[] = [
     slug: "ergonomic-gel-mouse-pad",
     title: "Ergonomic Gel Mouse Pad",
     category: "Computer Accessories",
-    imageSrc: "/products/ergonomic-gel-mouse-pad.jpg",
+    imageSrc: "/products%20images/Ergonomic%20Gel%20Mouse%20Pad.png",
     price: 25.0,
     attributes: {
       productType: "Accessory",
